@@ -81,11 +81,11 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
                 title = getString(R.string.title_home);
                 break;
             case 1:
-                fragment = new FragmentOrder();
+                fragment = new FragmentContuct();
                 title = getString(R.string.title_friends);
                 break;
             case 2:
-                fragment = new FragmentContuct();
+                fragment = new FragmentOrder();
                 title = getString(R.string.title_messages);
                 break;
             default:
@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
 
     private void setupFooter() {
         adapterFooter = new AdFooterTab(getSupportFragmentManager());
-        adapterFooter.addFragment(FragmentCategory.newInstance(), "Category");
+        adapterFooter.addFragment(FragmentCategory.newInstance(), "");
         adapterFooter.addFragment(FragmentOrder.newInstance(), "Order");
         adapterFooter.addFragment(FragmentContuct.newInstance(), "Contuct");
         adapterFooter.addFragment(FragmentOne.newInstance(), "One");
@@ -166,4 +166,6 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
         return isActive ? footerIcons.get(pos + 3) : footerIcons.get(pos);
 
     }
+
+
 }
