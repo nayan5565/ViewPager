@@ -99,7 +99,7 @@ public class FragmentCategory extends Fragment {
 
         if (email.isEmpty() || !isValidEmail(email)) {
             inputLayoutEmail.setError(getString(R.string.err_msg_email));
-//            requestFocus(inputEmail);
+            requestFocus(inputEmail);
             return false;
         } else {
             inputLayoutEmail.setErrorEnabled(false);
