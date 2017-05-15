@@ -2,19 +2,19 @@ package recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import ru.ngs.floatingactionbutton.FloatingActionButton;
-
 /**
  * Created by NAYAN on 5/8/2017.
  */
 public class FragmentContuct extends Fragment {
     private FloatingActionButton fab;
+
     @Nullable
     public static FragmentContuct newInstance() {
         return new FragmentContuct();
@@ -26,8 +26,8 @@ public class FragmentContuct extends Fragment {
         fab = (FloatingActionButton) view.findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Toast.makeText(getContext(), "Message", Toast.LENGTH_SHORT).show();
+            public void onClick(View v) {
+                Toast.makeText(getContext(), "floating button click", Toast.LENGTH_SHORT).show();
             }
         });
         return view;
