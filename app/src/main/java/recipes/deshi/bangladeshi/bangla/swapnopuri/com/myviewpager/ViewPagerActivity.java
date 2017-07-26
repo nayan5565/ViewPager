@@ -52,7 +52,7 @@ public class ViewPagerActivity extends AppCompatActivity {
       /*  for (int i = 0; i < footerTab.getTabCount(); i++) {
             footerTab.getTabAt(i).setIcon(footerIcon(i, false));
         }*/
-
+// footerTab getTabAt both method comment korar pore o kono prob hoi nai kn
         footerTab.getTabAt(selectTabPos).select();
         footerTab.getTabAt(selectTabPos).setIcon(footerIcon(selectTabPos, true));
         footerTab.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
@@ -69,7 +69,7 @@ public class ViewPagerActivity extends AppCompatActivity {
 
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
-//                tab.setIcon(footerIcon(tab.getPosition(), false));
+                tab.setIcon(footerIcon(tab.getPosition(), false));
             }
 
             @Override
