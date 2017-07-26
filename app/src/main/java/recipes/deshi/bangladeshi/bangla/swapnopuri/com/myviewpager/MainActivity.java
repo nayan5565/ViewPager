@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
                 title = getString(R.string.title_home);
                 break;
             case 1:
-                fragment = new FragmentContuctWithFloatingButton();
+                fragment = new FragmentFloatingButton();
                 title = getString(R.string.title_floating);
                 break;
             case 2:

@@ -38,16 +38,16 @@ public class ViewPagerActivity extends AppCompatActivity {
         adapterFooter = new AdFooterTab(getSupportFragmentManager());
         adapterFooter.addFragment(FragmentCategory.newInstance(), "Category");
         adapterFooter.addFragment(FragmentOrder.newInstance(), "Order");
-        adapterFooter.addFragment(FragmentContuctWithFloatingButton.newInstance(), "Contuct");
+        adapterFooter.addFragment(FragmentFloatingButton.newInstance(), "Floating");
         adapterFooter.addFragment(FragmentOne.newInstance(), "One");
         adapterFooter.addFragment(FragmentTwo.newInstance(), "Two");
         adapterFooter.addFragment(FragmentThree.newInstance(), "Three");
         adapterFooter.addFragment(FragmentFour.newInstance(), "Four");
         viewPager.setAdapter(adapterFooter);
         footerTab.setupWithViewPager(viewPager);
-        footerTab.setSelectedTabIndicatorHeight(20);
-        footerTab.setSelectedTabIndicatorColor(Color.RED);
-        footerTab.setTabTextColors(Color.WHITE, Color.parseColor("#6C4878"));
+        footerTab.setSelectedTabIndicatorHeight(2);
+        footerTab.setSelectedTabIndicatorColor(Color.GREEN);
+        footerTab.setTabTextColors(Color.WHITE, Color.GREEN);
 
       /*  for (int i = 0; i < footerTab.getTabCount(); i++) {
             footerTab.getTabAt(i).setIcon(footerIcon(i, false));
@@ -61,19 +61,20 @@ public class ViewPagerActivity extends AppCompatActivity {
 
                 tab.setIcon(footerIcon(tab.getPosition(), true));
 
+                //set current item kn use korsis. comment kore rakhar pore o kono change hoi nai kaj
                 viewPager.setCurrentItem(tab.getPosition());
-                footerTab.setTabTextColors(Color.WHITE, Color.parseColor("#6C4878"));
+                footerTab.setTabTextColors(Color.WHITE, Color.GREEN);
 
             }
 
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
-                tab.setIcon(footerIcon(tab.getPosition(), false));
+//                tab.setIcon(footerIcon(tab.getPosition(), false));
             }
 
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
-//                tab.setIcon(footerIcon(tab.getPosition(), true));
+                tab.setIcon(footerIcon(tab.getPosition(), true));
             }
         });
     }
@@ -93,7 +94,7 @@ public class ViewPagerActivity extends AppCompatActivity {
             footerIcons.add(R.drawable.grrencoins);
         }
 
-        return isActive ? footerIcons.get(pos + 3) : footerIcons.get(pos);
+        return isActive ? footerIcons.get(pos) : footerIcons.get(pos);
 
     }
 }

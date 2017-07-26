@@ -12,16 +12,16 @@ import android.widget.Toast;
 /**
  * Created by NAYAN on 5/8/2017.
  */
-public class FragmentContuctWithFloatingButton extends Fragment {
+public class FragmentFloatingButton extends Fragment {
     private FloatingActionButton fab;
 
     @Nullable
-    public static FragmentContuctWithFloatingButton newInstance() {
-        return new FragmentContuctWithFloatingButton();
+    public static FragmentFloatingButton newInstance() {
+        return new FragmentFloatingButton();
     }
 
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_contuct, container, false);
+        View view = inflater.inflate(R.layout.fragment_floating, container, false);
 
         fab = (FloatingActionButton) view.findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
