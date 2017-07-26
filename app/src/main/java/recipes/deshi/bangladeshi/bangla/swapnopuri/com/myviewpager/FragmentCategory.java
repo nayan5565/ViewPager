@@ -23,7 +23,7 @@ import android.widget.Toast;
  */
 public class FragmentCategory extends Fragment {
 
-    private Toolbar toolbar;
+//    private Toolbar toolbar;
     private EditText inputName, inputEmail, inputPassword;
     private TextInputLayout inputLayoutName, inputLayoutEmail, inputLayoutPassword;
     private Button btnSignUp;
@@ -37,8 +37,8 @@ public class FragmentCategory extends Fragment {
 
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_category, container, false);
-        toolbar = (Toolbar) view.findViewById(R.id.toolbar);
-        ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
+//        toolbar = (Toolbar) view.findViewById(R.id.toolbar);
+//        ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
 
         inputLayoutName = (TextInputLayout) view.findViewById(R.id.input_layout_name);
         inputLayoutEmail = (TextInputLayout) view.findViewById(R.id.input_layout_email);

@@ -79,7 +79,6 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
             case 3:
                 Intent intent = new Intent(this, ViewPagerActivity.class);
                 startActivity(intent);
-                title = getString(R.string.title_view_pager);
                 break;
             default:
                 break;
