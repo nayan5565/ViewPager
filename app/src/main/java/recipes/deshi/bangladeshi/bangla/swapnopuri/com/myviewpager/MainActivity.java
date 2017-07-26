@@ -1,12 +1,10 @@
 package recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager;
 
-import android.graphics.Color;
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -15,16 +13,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-import java.util.ArrayList;
-
 public class MainActivity extends AppCompatActivity implements FragmentDrawer.FragmentDrawerListener {
     Toolbar toolbar;
-    ViewPager viewPager;
-    TabLayout footerTab;
     private FragmentDrawer drawerFragment;
-    private static ArrayList<Integer> footerIcons;
-    private AdFooterTab adapterFooter;
-    public static int selectTabPos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,11 +23,8 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
         setContentView(R.layout.activity_main2);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("ViewPager");
-        viewPager = (ViewPager) findViewById(R.id.viewpager);
-        footerTab = (TabLayout) findViewById(R.id.footerTab);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        setupFooter();
         drawerFragment = (FragmentDrawer)
                 getSupportFragmentManager().findFragmentById(R.id.fragment_navigation_drawer);
         drawerFragment.setUp(R.id.fragment_navigation_drawer, (DrawerLayout) findViewById(R.id.drawer_layout), toolbar);
@@ -81,12 +69,17 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
                 title = getString(R.string.title_home);
                 break;
             case 1:
-                fragment = new FragmentContuct();
-                title = getString(R.string.title_friends);
+                fragment = new FragmentContuctWithFloatingButton();
+                title = getString(R.string.title_floating);
                 break;
             case 2:
                 fragment = new FragmentOrder();
                 title = getString(R.string.title_messages);
+                break;
+            case 3:
+                Intent intent = new Intent(this, ViewPagerActivity.class);
+                startActivity(intent);
+                title = getString(R.string.title_view_pager);
                 break;
             default:
                 break;
@@ -102,70 +95,4 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
             getSupportActionBar().setTitle(title);
         }
     }
-
-    private void setupFooter() {
-        adapterFooter = new AdFooterTab(getSupportFragmentManager());
-        adapterFooter.addFragment(FragmentCategory.newInstance(), "");
-        adapterFooter.addFragment(FragmentOrder.newInstance(), "Order");
-        adapterFooter.addFragment(FragmentContuct.newInstance(), "Contuct");
-        adapterFooter.addFragment(FragmentOne.newInstance(), "One");
-        adapterFooter.addFragment(FragmentTwo.newInstance(), "Two");
-        adapterFooter.addFragment(FragmentThree.newInstance(), "Three");
-        adapterFooter.addFragment(FragmentFour.newInstance(), "Four");
-        viewPager.setAdapter(adapterFooter);
-        footerTab.setupWithViewPager(viewPager);
-        footerTab.setSelectedTabIndicatorHeight(20);
-        footerTab.setSelectedTabIndicatorColor(Color.RED);
-        footerTab.setTabTextColors(Color.WHITE, Color.parseColor("#6C4878"));
-
-      /*  for (int i = 0; i < footerTab.getTabCount(); i++) {
-            footerTab.getTabAt(i).setIcon(footerIcon(i, false));
-        }*/
-
-        footerTab.getTabAt(selectTabPos).select();
-        footerTab.getTabAt(selectTabPos).setIcon(footerIcon(selectTabPos, true));
-        footerTab.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-
-                tab.setIcon(footerIcon(tab.getPosition(), true));
-
-                viewPager.setCurrentItem(tab.getPosition());
-                footerTab.setTabTextColors(Color.WHITE, Color.parseColor("#6C4878"));
-
-            }
-
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-                tab.setIcon(footerIcon(tab.getPosition(), false));
-            }
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-//                tab.setIcon(footerIcon(tab.getPosition(), true));
-            }
-        });
-    }
-
-    private int footerIcon(int pos, boolean isActive) {
-        if (footerIcons == null) {
-            footerIcons = new ArrayList<>();
-            footerIcons.add(R.drawable.icon_cat);
-            footerIcons.add(R.drawable.icon_order);
-            footerIcons.add(R.drawable.icon_contact);
-
-            footerIcons.add(R.drawable.green_star1);
-            footerIcons.add(R.drawable.green_star_base);
-            footerIcons.add(R.drawable.grrencoins);
-            footerIcons.add(R.drawable.grrencoins);
-            footerIcons.add(R.drawable.grrencoins);
-            footerIcons.add(R.drawable.grrencoins);
-            footerIcons.add(R.drawable.grrencoins);
-        }
-
-        return isActive ? footerIcons.get(pos + 3) : footerIcons.get(pos);
-
-    }
-
-
 }
