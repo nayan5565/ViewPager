@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
                 break;
             case 2:
                 fragment = new FragmentOrder();
-                title = getString(R.string.title_messages);
+                title = getString(R.string.title_Order);
                 break;
             case 3:
                 Intent intent = new Intent(this, ViewPagerActivity.class);

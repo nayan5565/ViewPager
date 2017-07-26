@@ -15,7 +15,7 @@
 
     <string name="nav_item_home">Home</string>
     <string name="nav_item_friends">FloatingButton</string>
-    <string name="nav_item_notifications">Messages</string>
+    <string name="nav_item_notifications">Order</string>
     <string name="nav_item_view_pager">ViewPager</string>
 
     <!-- navigation drawer item labels  -->
@@ -26,7 +26,7 @@
         <item>@string/nav_item_view_pager</item>
     </string-array>
 
-    <string name="title_messages">Messages</string>
+    <string name="title_Order">Order</string>
     <string name="title_floating">FloatingButton</string>
     <string name="title_home">Home</string>
     <string name="title_view_pager">ViewPager</string>
