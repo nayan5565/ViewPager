@@ -70,11 +70,12 @@ public class NavigationGroupViewActivity extends AppCompatActivity {
         imgProfile = (ImageView) navHeader.findViewById(R.id.img_profile);
         loadNavHeader();
         setUpNavigationView();
-        if (savedInstanceState == null) {
-            navItemIndex = 0;
-            CURRENT_TAG = TAG_HOME;
-            loadHomeFragment();
-        }
+//        if (savedInstanceState == null) {
+//            navItemIndex = 0;
+//            CURRENT_TAG = TAG_HOME;
+//            loadHomeFragment();
+//        }
+        loadHomeFragment();
     }
 
     private void loadNavHeader() {
