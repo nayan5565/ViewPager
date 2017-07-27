@@ -10,10 +10,10 @@ import android.view.ViewGroup;
 /**
  * Created by NAYAN on 5/10/2017.
  */
-public class FragmentThree extends Fragment {
+public class FragmentNotification extends Fragment {
     @Nullable
-    public static FragmentThree newInstance() {
-        return new FragmentThree();
+    public static FragmentNotification newInstance() {
+        return new FragmentNotification();
     }
 
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

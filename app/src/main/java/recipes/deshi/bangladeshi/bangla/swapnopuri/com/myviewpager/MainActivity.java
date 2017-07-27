@@ -85,12 +85,16 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
                 title = getString(R.string.title_photo);
                 break;
             case 5:
-                fragment = new FragmentTwo();
+                fragment = new FragmentMovies();
                 title = getString(R.string.title_Order);
                 break;
             case 6:
-                fragment = new FragmentThree();
+                fragment = new FragmentNotification();
                 title = getString(R.string.title_Order);
+                break;
+            case 7:
+                Intent intent1 = new Intent(this, NavigationGroupViewActivity.class);
+                startActivity(intent1);
                 break;
             default:
                 break;

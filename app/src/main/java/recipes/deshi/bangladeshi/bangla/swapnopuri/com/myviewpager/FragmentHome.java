@@ -10,10 +10,10 @@ import android.view.ViewGroup;
 /**
  * Created by NAYAN on 5/10/2017.
  */
-public class FragmentFour extends Fragment {
+public class FragmentHome extends Fragment {
     @Nullable
-    public static FragmentFour newInstance() {
-        return new FragmentFour();
+    public static FragmentHome newInstance() {
+        return new FragmentHome();
     }
 
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

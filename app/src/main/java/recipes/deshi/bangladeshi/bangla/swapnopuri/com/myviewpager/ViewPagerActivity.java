@@ -42,9 +42,9 @@ public class ViewPagerActivity extends AppCompatActivity {
         adapterFooter.addFragment(FragmentOrder.newInstance(), "Order");
         adapterFooter.addFragment(FragmentFloatingButton.newInstance(), "Floating");
         adapterFooter.addFragment(FragmentPhoto.newInstance(), "One");
-        adapterFooter.addFragment(FragmentTwo.newInstance(), "Two");
-        adapterFooter.addFragment(FragmentThree.newInstance(), "Three");
-        adapterFooter.addFragment(FragmentFour.newInstance(), "Four");
+        adapterFooter.addFragment(FragmentMovies.newInstance(), "Two");
+        adapterFooter.addFragment(FragmentNotification.newInstance(), "Three");
+        adapterFooter.addFragment(FragmentHome.newInstance(), "Four");
         viewPager.setAdapter(adapterFooter);
         footerTab.setupWithViewPager(viewPager);
         footerTab.setSelectedTabIndicatorHeight(2);
