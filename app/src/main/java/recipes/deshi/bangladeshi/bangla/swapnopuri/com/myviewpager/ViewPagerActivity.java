@@ -19,7 +19,8 @@ public class ViewPagerActivity extends AppCompatActivity {
     Toolbar toolbar;
     private static ArrayList<Integer> footerIcons;
     private AdFooterTab adapterFooter;
-    public static int selectTabPos=0;
+    public static int selectTabPos = 0;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +35,7 @@ public class ViewPagerActivity extends AppCompatActivity {
         viewPager = (ViewPager) findViewById(R.id.viewpager);
         footerTab = (TabLayout) findViewById(R.id.footerTab);
     }
+
     private void setupFooter() {
         adapterFooter = new AdFooterTab(getSupportFragmentManager());
         adapterFooter.addFragment(FragmentCategory.newInstance(), "Category");
@@ -49,8 +51,8 @@ public class ViewPagerActivity extends AppCompatActivity {
         footerTab.setSelectedTabIndicatorColor(Color.GREEN);
         footerTab.setTabTextColors(Color.WHITE, Color.GREEN);
 
-        //all icon pic view with open
-       for (int i = 0; i < footerTab.getTabCount(); i++) {
+        // view all icon pic of footerTab with open
+        for (int i = 0; i < footerTab.getTabCount(); i++) {
             footerTab.getTabAt(i).setIcon(footerIcon(i, true));
         }
 // witch select footertab when open app
@@ -79,6 +81,7 @@ public class ViewPagerActivity extends AppCompatActivity {
             }
         });
     }
+
     private int footerIcon(int pos, boolean isActive) {
         if (footerIcons == null) {
             footerIcons = new ArrayList<>();

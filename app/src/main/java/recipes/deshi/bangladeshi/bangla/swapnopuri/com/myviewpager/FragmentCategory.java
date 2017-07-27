@@ -47,7 +47,6 @@ public class FragmentCategory extends Fragment {
         inputEmail = (EditText) view.findViewById(R.id.input_email);
         inputPassword = (EditText) view.findViewById(R.id.input_password);
         btnSignUp = (Button) view.findViewById(R.id.btn_signup);
-        //addTexChanLis code use korar karon
         inputName.addTextChangedListener(new MyTextWatcher(inputName));
         inputEmail.addTextChangedListener(new MyTextWatcher(inputEmail));
         inputPassword.addTextChangedListener(new MyTextWatcher(inputPassword));
