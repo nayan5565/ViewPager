@@ -19,7 +19,7 @@ public class ViewPagerActivity extends AppCompatActivity {
     Toolbar toolbar;
     private static ArrayList<Integer> footerIcons;
     private AdFooterTab adapterFooter;
-    public static int selectTabPos;
+    public static int selectTabPos=0;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,10 +49,11 @@ public class ViewPagerActivity extends AppCompatActivity {
         footerTab.setSelectedTabIndicatorColor(Color.GREEN);
         footerTab.setTabTextColors(Color.WHITE, Color.GREEN);
 
-      /*  for (int i = 0; i < footerTab.getTabCount(); i++) {
-            footerTab.getTabAt(i).setIcon(footerIcon(i, false));
-        }*/
-// footerTab getTabAt both method comment korar pore o kono prob hoi nai kn
+        //all icon pic view with open
+       for (int i = 0; i < footerTab.getTabCount(); i++) {
+            footerTab.getTabAt(i).setIcon(footerIcon(i, true));
+        }
+// witch select footertab when open app
         footerTab.getTabAt(selectTabPos).select();
         footerTab.getTabAt(selectTabPos).setIcon(footerIcon(selectTabPos, true));
         footerTab.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
@@ -62,7 +63,7 @@ public class ViewPagerActivity extends AppCompatActivity {
                 tab.setIcon(footerIcon(tab.getPosition(), true));
 
                 //set current item kn use korsis. comment kore rakhar pore o kono change hoi nai kaj
-                viewPager.setCurrentItem(tab.getPosition());
+//                viewPager.setCurrentItem(tab.getPosition());
                 footerTab.setTabTextColors(Color.WHITE, Color.GREEN);
 
             }
