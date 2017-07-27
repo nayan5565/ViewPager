@@ -80,6 +80,18 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
                 Intent intent = new Intent(this, ViewPagerActivity.class);
                 startActivity(intent);
                 break;
+            case 4:
+                fragment = new FragmentPhoto();
+                title = getString(R.string.title_photo);
+                break;
+            case 5:
+                fragment = new FragmentTwo();
+                title = getString(R.string.title_Order);
+                break;
+            case 6:
+                fragment = new FragmentThree();
+                title = getString(R.string.title_Order);
+                break;
             default:
                 break;
         }

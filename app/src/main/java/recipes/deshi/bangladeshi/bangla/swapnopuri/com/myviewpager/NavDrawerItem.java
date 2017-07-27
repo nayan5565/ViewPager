@@ -6,7 +6,15 @@ package recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager;
 public class NavDrawerItem {
     private boolean showNotify;
     private String title;
+    private int imgRes;
 
+    public int getImgRes() {
+        return imgRes;
+    }
+
+    public void setImgRes(int imgRes) {
+        this.imgRes = imgRes;
+    }
 
     public NavDrawerItem() {
 

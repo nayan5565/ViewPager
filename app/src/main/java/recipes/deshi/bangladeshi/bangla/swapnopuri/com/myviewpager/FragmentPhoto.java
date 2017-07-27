@@ -10,14 +10,14 @@ import android.view.ViewGroup;
 /**
  * Created by NAYAN on 5/10/2017.
  */
-public class FragmentOne extends Fragment {
+public class FragmentPhoto extends Fragment {
     @Nullable
-    public static FragmentOne newInstance() {
-        return new FragmentOne();
+    public static FragmentPhoto newInstance() {
+        return new FragmentPhoto();
     }
 
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_one, container, false);
+        View view = inflater.inflate(R.layout.fragment_photo, container, false);
         return view;
     }
 }

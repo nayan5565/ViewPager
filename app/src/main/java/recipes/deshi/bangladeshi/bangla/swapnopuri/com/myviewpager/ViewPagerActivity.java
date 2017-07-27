@@ -41,7 +41,7 @@ public class ViewPagerActivity extends AppCompatActivity {
         adapterFooter.addFragment(FragmentCategory.newInstance(), "Category");
         adapterFooter.addFragment(FragmentOrder.newInstance(), "Order");
         adapterFooter.addFragment(FragmentFloatingButton.newInstance(), "Floating");
-        adapterFooter.addFragment(FragmentOne.newInstance(), "One");
+        adapterFooter.addFragment(FragmentPhoto.newInstance(), "One");
         adapterFooter.addFragment(FragmentTwo.newInstance(), "Two");
         adapterFooter.addFragment(FragmentThree.newInstance(), "Three");
         adapterFooter.addFragment(FragmentFour.newInstance(), "Four");
