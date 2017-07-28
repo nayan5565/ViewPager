@@ -1,14 +1,11 @@
-package recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager;
+package recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager.activity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -19,6 +16,12 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager.R;
+import recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager.fragment.FragmentHome;
+import recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager.fragment.FragmentMovies;
+import recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager.fragment.FragmentNotification;
+import recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager.fragment.FragmentPhoto;
 
 /**
  * Created by Nayan on 7/27/2017.

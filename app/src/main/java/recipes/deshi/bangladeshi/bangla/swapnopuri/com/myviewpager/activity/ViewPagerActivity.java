@@ -1,4 +1,4 @@
-package recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager;
+package recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager.activity;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -9,6 +9,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
 import java.util.ArrayList;
+
+import recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager.adapter.AdFooterTab;
+import recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager.fragment.FragmentCategory;
+import recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager.fragment.FragmentFloatingButton;
+import recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager.fragment.FragmentHome;
+import recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager.fragment.FragmentMovies;
+import recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager.fragment.FragmentNotification;
+import recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager.fragment.FragmentOrder;
+import recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager.fragment.FragmentPhoto;
+import recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager.R;
 
 /**
  * Created by Nayan on 7/26/2017.

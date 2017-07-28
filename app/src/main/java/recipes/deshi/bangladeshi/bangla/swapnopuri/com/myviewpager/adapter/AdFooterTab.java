@@ -1,4 +1,4 @@
-package recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager;
+package recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager.adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

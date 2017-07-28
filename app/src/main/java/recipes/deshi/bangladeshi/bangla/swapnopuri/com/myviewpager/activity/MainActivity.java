@@ -1,4 +1,4 @@
-package recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager;
+package recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +12,15 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
+
+import recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager.fragment.FragmentCategory;
+import recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager.fragment.FragmentDrawer;
+import recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager.fragment.FragmentFloatingButton;
+import recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager.fragment.FragmentMovies;
+import recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager.fragment.FragmentNotification;
+import recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager.fragment.FragmentOrder;
+import recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager.fragment.FragmentPhoto;
+import recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager.R;
 
 public class MainActivity extends AppCompatActivity implements FragmentDrawer.FragmentDrawerListener {
     Toolbar toolbar;

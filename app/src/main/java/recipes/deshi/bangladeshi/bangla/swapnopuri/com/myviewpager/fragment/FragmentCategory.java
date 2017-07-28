@@ -1,12 +1,10 @@
-package recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager;
+package recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager.fragment;
 
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -17,6 +15,8 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager.R;
 
 /**
  * Created by NAYAN on 5/8/2017.

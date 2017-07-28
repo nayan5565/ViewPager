@@ -1,4 +1,4 @@
-package recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager;
+package recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager.fragment;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -16,6 +16,10 @@ import android.view.ViewGroup;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager.model.MNavDrawerItem;
+import recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager.adapter.NavigationDrawerAdapter;
+import recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager.R;
 
 /**
  * Created by NAYAN on 5/9/2017.
@@ -40,13 +44,13 @@ public class FragmentDrawer extends Fragment {
         this.drawerListener = listener;
     }
 
-    public static List<NavDrawerItem> getData() {
-        List<NavDrawerItem> data = new ArrayList<>();
+    public static List<MNavDrawerItem> getData() {
+        List<MNavDrawerItem> data = new ArrayList<>();
 
 
         // preparing navigation drawer items
         for (int i = 0; i < titles.length; i++) {
-            NavDrawerItem navItem = new NavDrawerItem();
+            MNavDrawerItem navItem = new MNavDrawerItem();
             navItem.setTitle(titles[i]);
             data.add(navItem);
         }

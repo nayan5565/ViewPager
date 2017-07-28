@@ -1,4 +1,4 @@
-package recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager;
+package recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -11,15 +11,18 @@ import android.widget.TextView;
 import java.util.Collections;
 import java.util.List;
 
+import recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager.R;
+import recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager.model.MNavDrawerItem;
+
 /**
  * Created by NAYAN on 5/9/2017.
  */
 public class NavigationDrawerAdapter extends RecyclerView.Adapter<NavigationDrawerAdapter.MyViewHolder> {
-    List<NavDrawerItem> data = Collections.emptyList();
+    List<MNavDrawerItem> data = Collections.emptyList();
     private LayoutInflater inflater;
     private Context context;
 
-    public NavigationDrawerAdapter(Context context, List<NavDrawerItem> data) {
+    public NavigationDrawerAdapter(Context context, List<MNavDrawerItem> data) {
         this.context = context;
         inflater = LayoutInflater.from(context);
         this.data = data;
@@ -39,7 +42,7 @@ public class NavigationDrawerAdapter extends RecyclerView.Adapter<NavigationDraw
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        NavDrawerItem current = data.get(position);
+        MNavDrawerItem current = data.get(position);
         holder.title.setText(current.getTitle());
         if (position==4){
             holder.imageView.setImageResource(R.drawable.ic_photo_library_black_24dp);

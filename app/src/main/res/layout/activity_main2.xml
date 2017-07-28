@@ -40,11 +40,10 @@
 
     <fragment
         android:id="@+id/fragment_navigation_drawer"
-        android:name="recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager.FragmentDrawer"
+        android:name="recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager.fragment.FragmentDrawer"
         android:layout_width="@dimen/nav_drawer_width"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        app:layout="@layout/fragment_navigation_drawer"
         tools:layout="@layout/fragment_navigation_drawer" />
 
 </android.support.v4.widget.DrawerLayout>

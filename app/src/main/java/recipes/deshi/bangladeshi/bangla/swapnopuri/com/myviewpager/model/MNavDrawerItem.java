@@ -1,9 +1,9 @@
-package recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager;
+package recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager.model;
 
 /**
  * Created by NAYAN on 5/9/2017.
  */
-public class NavDrawerItem {
+public class MNavDrawerItem {
     private boolean showNotify;
     private String title;
     private int imgRes;
@@ -16,11 +16,11 @@ public class NavDrawerItem {
         this.imgRes = imgRes;
     }
 
-    public NavDrawerItem() {
+    public MNavDrawerItem() {
 
     }
 
-    public NavDrawerItem(boolean showNotify, String title) {
+    public MNavDrawerItem(boolean showNotify, String title) {
         this.showNotify = showNotify;
         this.title = title;
     }

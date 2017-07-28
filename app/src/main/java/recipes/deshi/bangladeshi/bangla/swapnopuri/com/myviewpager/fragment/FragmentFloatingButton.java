@@ -1,4 +1,4 @@
-package recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager;
+package recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -8,6 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
+
+import recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager.R;
 
 /**
  * Created by NAYAN on 5/8/2017.
