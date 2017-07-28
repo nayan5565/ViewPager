@@ -5,11 +5,13 @@ import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -18,6 +20,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager.R;
+import recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager.fragment.FragmentCategory;
 import recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager.fragment.FragmentHome;
 import recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager.fragment.FragmentMovies;
 import recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager.fragment.FragmentNotification;
@@ -188,7 +191,7 @@ public class NavigationGroupViewActivity extends AppCompatActivity {
             // This method will trigger on item Click of navigation menu
             @Override
             public boolean onNavigationItemSelected(MenuItem menuItem) {
-
+                Fragment fragment = null;
 
                 //Check to see which item was being clicked and perform appropriate action
                 switch (menuItem.getItemId()) {
@@ -196,22 +199,27 @@ public class NavigationGroupViewActivity extends AppCompatActivity {
                     case R.id.nav_home:
                         navItemIndex = 0;
                         CURRENT_TAG = TAG_HOME;
+//                        fragment = new FragmentHome();
                         break;
                     case R.id.nav_photos:
                         navItemIndex = 1;
                         CURRENT_TAG = TAG_PHOTOS;
+//                        fragment = new FragmentPhoto();
                         break;
                     case R.id.nav_movies:
                         navItemIndex = 2;
                         CURRENT_TAG = TAG_MOVIES;
+//                        fragment = new FragmentMovies();
                         break;
                     case R.id.nav_notifications:
                         navItemIndex = 3;
                         CURRENT_TAG = TAG_NOTIFICATIONS;
+//                        fragment = new FragmentNotification();
                         break;
                     case R.id.nav_settings:
                         navItemIndex = 4;
                         CURRENT_TAG = TAG_SETTINGS;
+//                        fragment = new FragmentCategory();
                         break;
                     case R.id.nav_about_us:
                         // launch new intent instead of loading fragment
@@ -225,6 +233,28 @@ public class NavigationGroupViewActivity extends AppCompatActivity {
                         navItemIndex = 0;
                 }
 
+//                if (R.id.nav_home == 2131624113) {
+//                    navItemIndex = 0;
+//                } else if (R.id.nav_photos == 2131624114) {
+//                    navItemIndex = 1;
+//                } else if (R.id.nav_movies == 2131624115) {
+//                    navItemIndex = 2;
+//                } else if (R.id.nav_notifications == 2131624116) {
+//                    navItemIndex = 3;
+//                }
+////                navItemIndex=menuItem.getItemId();
+//                Log.e("id", " id " + menuItem.getItemId());
+//
+//                if (fragment != null) {
+//                    FragmentManager fragmentManager = getSupportFragmentManager();
+//                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//                    fragmentTransaction.replace(R.id.container_body, fragment, CURRENT_TAG);
+//                    fragmentTransaction.commit();
+
+                    // set the toolbar title
+//                    getSupportActionBar().setTitle(title);
+//                }
+
                 //Checking if the item is in checked state or not, if not make it in checked state
                 if (menuItem.isChecked()) {
                     menuItem.setChecked(false);
@@ -232,9 +262,11 @@ public class NavigationGroupViewActivity extends AppCompatActivity {
                     menuItem.setChecked(true);
                 }
                 menuItem.setChecked(true);
-
+//                setToolbarTitle();
+//                selectNavMenu();
                 loadHomeFragment();
-
+//                drawer.closeDrawers();
+//                invalidateOptionsMenu();
                 return true;
 
             }
@@ -270,13 +302,13 @@ public class NavigationGroupViewActivity extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
 
         // show menu only when home fragment is selected
-        if (navItemIndex == 0) {
+        if (navItemIndex==0) {
             getMenuInflater().inflate(R.menu.main, menu);
         }
 
 
         // when fragment is notifications, load the menu created for notifications
-        if (navItemIndex == 3) {
+        if (navItemIndex==3) {
             getMenuInflater().inflate(R.menu.notifications, menu);
         }
         return true;
