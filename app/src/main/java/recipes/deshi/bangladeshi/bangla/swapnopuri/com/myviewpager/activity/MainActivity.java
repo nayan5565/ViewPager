@@ -25,6 +25,7 @@ import recipes.deshi.bangladeshi.bangla.swapnopuri.com.myviewpager.R;
 public class MainActivity extends AppCompatActivity implements FragmentDrawer.FragmentDrawerListener {
     Toolbar toolbar;
     private FragmentDrawer drawerFragment;
+    private int pos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +45,13 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        if (pos == 0) {
+            getMenuInflater().inflate(R.menu.menu_main, menu);
+        }
+        if (pos == 2) {
+            getMenuInflater().inflate(R.menu.main, menu);
+        }
+
         return true;
     }
 
@@ -118,5 +125,7 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
             // set the toolbar title
             getSupportActionBar().setTitle(title);
         }
+
+        pos = position;
     }
 }
