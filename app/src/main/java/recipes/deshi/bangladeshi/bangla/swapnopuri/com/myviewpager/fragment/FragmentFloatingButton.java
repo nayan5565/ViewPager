@@ -93,6 +93,7 @@ public class FragmentFloatingButton extends Fragment {
                         .setAction("RETRY", new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
+                                Toast.makeText(getContext(), "retry", Toast.LENGTH_SHORT).show();
                             }
                         });
 
